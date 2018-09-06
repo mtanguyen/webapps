@@ -8,6 +8,7 @@
 	    overflow: hidden;
 	    background-color: #333;
 	    font-family: sans-serif;
+	    padding-left: 30px;
 	}
 
 	#navbar {
@@ -36,8 +37,16 @@
 
 	.jumbotron-text{
 		color: white;
-		padding: 20px;
+		padding-bottom: 20px;
 		padding-right: 60%;
 		padding-top: 10px;
+		padding-left: 30px;
 	}
+
+/*Menu css*/
+	#menu{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
 
