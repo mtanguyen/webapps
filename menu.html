@@ -2,22 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="menu.css" type="text/css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
     <title>Asian Food Junkies</title>
 </head>
 <body>
-   <!-- This stuff is displayed on the page -->
-    <h1>Welcome to Asian Food Junkies!</h1>
-    <p>Our restaurant focuses on three (3) things: <strong>asia</strong>, <strong>food</strong>, and <strong>junkies</strong>. We are devoted to quenching and satisfying your taste buds.</p>
-    
+ <!-- This stuff is displayed on the page -->
     <nav>
-      <a href="#beverages">Beverages</a> |
-      <a href="#appetizers">Appetizers</a> |
-      <a href="#mainmenu">Main Menu</a> |
-      <a href="#sushi">Sushi</a> |
-      <a href="#noodlesrice">Noodles and Rice</a> |
-      <a href="#combos">Combos</a>
+        <ul id="navigation">
+            <li id="navbar"><a href="#beverages">Beverages</a></li> 
+            <li id="navbar"><a href="#appetizers">Appetizers</a></li> 
+            <li id="navbar"><a href="#mainmenu">Main Menu</a></li> 
+            <li id="navbar"><a href="#sushi">Sushi</a></li> 
+            <li id="navbar"><a href="#noodlesrice">Noodles and Rice</a></li> 
+            <li id="navbar"><a href="#combos">Combos</a></li>
+        </ul>
     </nav>
+
+    <div class="jumbotron">
+        <div class="jumbotron-text">
+            <h1>Welcome to Asian Food Junkies!</h1>
+            <p>Our restaurant focuses on three (3) things: <strong>asia</strong>, <strong>food</strong>, and <strong>junkies</strong>. We are devoted to quenching and satisfying your taste buds.</p>
+        </div>
+    </div>
     
+
     <section id="beverages"> 
         <h2>Beverages</h2>
         <p>Let travel with us from Taiwan with boba tea to Vietnam with Vietnamese iced coffee.</p>
@@ -29,7 +44,7 @@
             <li><strong>(China) Kombucha</strong></li>
         </ul>
     </section>
-    
+
     <section id="appetizers"> 
         <h2>Appetizers</h2>
         <p>Let travel with us from Taiwan with boba tea to Vietnam with Vietnamese iced coffee.</p>
@@ -41,7 +56,7 @@
             <li><strong>(China) Kombucha</strong></li>
         </ul>
     </section>
-    
+
     <section id="mainmenu"> 
         <h2>Main Menu</h2>
         <p>Let travel with us from Taiwan with boba tea to Vietnam with Vietnamese iced coffee.</p>
@@ -66,7 +81,7 @@
         </ul>
         <!-- https://www.konagrill.com/menu/sushi -->
     </section>
-    
+
     <section id="noodlesrice"> 
         <h2>Noodles and Rice</h2>
         <p>Let travel with us from Taiwan with boba tea to Vietnam with Vietnamese iced coffee.</p>
@@ -78,15 +93,15 @@
             <li><strong>(China) Kombucha</strong></li>
         </ul>
     </section>
-    
+
     <section id="combos"> 
         <h2>Combos</h2>
         <p>Pick 1 dish from each category.</p>
         <table border>
             <tr>    
-            <!-- td{Header$}*2 -->
-            <th>Header1</th>
-            <th>Header2</th>
+                <!-- td{Header$}*2 -->
+                <th>Header1</th>
+                <th>Header2</th>
             </tr>
             <!-- (tr>td{Data $}*2)*4 -->
             <tr>
