@@ -25,6 +25,26 @@
 		padding-bottom: 40px;
 	}
 
+	.col-md-4{
+		padding-right: 20px;
+	}
+
+	img{
+		width: 250px;
+		height: 250px;
+		padding-bottom: 20px;
+		align-content: center;
+	}
+
+	.comboinfo{
+		padding: 10px;
+		text-align: center;
+	}
+
+	#combo-types{
+		font-size: 4vh;
+	}
+
 /*Footer css*/
 	#contactus{
 		background-color: #006747;
