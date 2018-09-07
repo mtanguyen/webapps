@@ -1,0 +1,71 @@
+/*This CSS doc will be used to add styling to the menu.html file.*/
+
+/*Navbar css*/
+	/*#navigation {
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    overflow: hidden;
+	    background-color: #333;
+	    font-family: sans-serif;
+	    padding-left: 30px;
+
+	}
+
+	/*li{
+		float: left;
+	}*/
+/*
+	#navbar1 {
+	    float: left;
+	}
+
+	li a {
+	    color: white;
+	    text-align: center;
+	    padding: 14px 16px;
+	    text-decoration: none;
+	}
+
+	/* Change the link color on hover */
+	/*li a:hover {
+	    background-color: #111;
+	}*/
+
+/*Jumbotron css*/
+	/*Photo by Elli O. on Unsplash*/
+	.jumbotron{
+		background: url('images/elli-o.jpg') no-repeat center center;
+		background-size: cover;
+	}
+
+	.jumbotron-text{
+		color: white;
+		padding-bottom: 20px;
+		padding-right: 60%;
+		padding-top: 10px;
+		padding-left: 30px;
+	}
+
+/*Menu css*/
+	#menu{
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 20px;
+		background-color: #D6BC81;
+		margin-top: -30px;
+		padding-bottom: 40px;
+	}
+
+/*Footer css*/
+	#contactus{
+		background-color: #006747;
+		margin-top: -30px;
+		padding-bottom: 20px;
+		padding-top: 10px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+
+
