@@ -45,6 +45,10 @@
 		font-size: 4vh;
 	}
 
+	th, td{
+		border-bottom: 1px solid black;
+	}
+
 /*Footer css*/
 	#contactus{
 		background-color: #006747;
