@@ -42,10 +42,6 @@
 		text-align: center;
 	}
 
-	#combo-types{
-		font-size: 4vh;
-	}
-
 	th, td{
 		border-bottom: 1px solid black;
 	}
