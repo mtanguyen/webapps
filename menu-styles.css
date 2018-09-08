@@ -1,7 +1,7 @@
 /*This CSS doc will be used to add styling to the menu.html file.*/
 
-/*Jumbotron css*/
-	/*Photo by Elli O. on Unsplash*/
+/* Jumbotron CSS */
+	/* Photo by Elli O. on Unsplash */
 	.jumbotron{
 		background: url('images/elli-o.jpg') no-repeat center center;
 		background-size: cover;
@@ -15,7 +15,7 @@
 		padding-left: 30px;
 	}
 
-/*Menu css*/
+/* Menu CSS */
 	#menuitems{
 		padding-left: 30px;
 		padding-right: 30px;
@@ -49,9 +49,9 @@
 		border-bottom: 1px solid black;
 	}
 
-/*Footer css*/
+/* Footer CSS */
 	#contactus{
-		background-color: black;
+		background-color: #101010;
 		margin-top: -30px;
 		padding-bottom: 20px;
 		padding-top: 10px;
