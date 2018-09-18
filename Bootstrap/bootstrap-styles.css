@@ -1,0 +1,74 @@
+/*This CSS doc will be used to add styling to the bootstrap.html file.*/
+
+/* Jumbotron CSS */
+	/* Photo by Elli O. on Unsplash */
+	.jumbotron{
+		background: url('images/flag.jpg') no-repeat center center;
+		background-size: cover;
+	}
+
+	.jumbotron-text{
+		color: white;
+		padding-bottom: 20px;
+		padding-top: 30px;
+		text-align: center;
+	}
+
+/* CSS */
+	#items{
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 20px;
+		background-color: #D6BC81;
+		margin-top: -30px;
+		padding-bottom: 40px;
+	}
+
+	.col-md-4{
+		padding-right: 20px;
+		text-align: center;
+	}
+
+	img{
+		width: 250px;
+		height: 250px;
+		padding-bottom: 20px;
+		align-content: center;
+	}
+
+	.cities{
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		border-right: 1px solid black;
+		border-bottom: 1px solid black;
+		padding: 10px;
+		text-align: center;
+	}
+
+	th{
+/*		border-top: 1px solid black;
+		border-left: 1px solid black;
+		border-right: 1px solid black;
+		border-bottom: 1px solid black;
+		background-color: red;*/
+	}
+
+/* Footer CSS */
+	/*#contactus{
+		background-color: #101010;
+		margin-top: -30px;
+		padding-bottom: 20px;
+		padding-top: 10px;
+		padding-left: 50px;
+		padding-right: 30px;
+		color: silver;
+	}
+
+	#contactinfo{
+		vertical-align: center;
+	}
+
+	#map1, #map2{
+		text-align: center;
+	}
+*/
