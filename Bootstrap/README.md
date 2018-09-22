@@ -1,4 +1,4 @@
-#Bootstrap.html
+# Bootstrap.html
 
 **Objective:** For this assignment you will create a responsive fluid web page using Twitter's Bootstrap (version 4.0.0).
 
@@ -13,10 +13,10 @@
 - You must also use a carousel to display at least 3 images.  You may reuse the same images from above.  You may not use the Javascript interface to the carousel -- you must use data attributes instead.
 - You must have a navbar with links into your page that is fluid and ultimately closes to a single button when the viewport is small.  For example, the top image below was taken with viewport size of 1076 while the bottom image was taken with a viewport of 760.
 
-##bootstrap.html
+## bootstrap.html
 This file consists of the content.
 
-##bootstrap-styles.css
+## bootstrap-styles.css
 This CSS document adds styling to the bootstrap.html file.
 
 The co-authors are My Nguyen (focused on HTML) and Blanche Pinto (focused on Bootstrap/CSS). 
