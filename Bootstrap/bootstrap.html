@@ -1,219 +1,271 @@
-<!-- Authors: My Nguyen and Blanche Pinto -->
-<!-- Filename: bootstrap.html -->
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="bootstrap-styles.css" type="text/css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <title>Belgium Travel Bug</title>
-    <style>
-        .aesthetics{
-            margin: 1em;
-        } 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-        li{
-            margin: 2em;
-        }
-    </style>
-</head>
-<body>
+    <title>Belgium Bug</title>
+  </head>
+  <body>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span> 
-              </button>  
-              <a class="navbar-brand" href="bootstrap.html">Belgium Travel Bug</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="#about">About</a></li> 
-                    <li><a href="#trips">Trips</a></li>
-                    <li><a href="#traveltips">Travel Tips</a></li> 
-                </ul>
-            </div>    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Belgium Bug</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#trips">Trips</a>
+          <a class="nav-item nav-link" href="#traveltips">Travel Tips</a>
         </div>
+      </div>
     </nav>
 
     <!-- Jumbotron -->
-    <div class="jumbotron">
-        <div class="jumbotron-text">
-            <h1 style="">Welcome to Belgium!</h1>
-        </div>
-    </div>
-    
-    <!-- Code from URL: https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_carousel2&stacked=h. Date pulled: 09/17/2018 -->
-    <section id="items">
-    <div class="container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <img src="images/bruges.jpg" alt="Bruges" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Bruges</h3>
-            </div>
-          </div>
-
-          <div class="item">
-            <img src="images/brussels.jpg" alt="Brussels" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Brussels</h3>
-            </div>
-          </div>
-        
-          <div class="item">
-            <img src="images/liege.jpg" alt="Liège" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Liège</h3>
-            </div>
-          </div>      
-        </div>
-
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Next</span>
-        </a>
+    <div class="jumbotron jumbotron-fluid" id="jumbo-bg">
+      <div class="container">
+        <h1 class="jumbotron-text">Welcome to Belgium Bug</h1>
       </div>
     </div>
+
+    <!-- Code from URL: https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_carousel2&stacked=h. Date pulled: 09/17/2018 -->
+    <section id="items">
+      <div class="container" style="padding-bottom: 20px;">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ul>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/bruges.jpg" alt="Bruges" style="width:100%; min-height: 100%">
+              <div class="carousel-caption">
+                <h3>Bruges</h3>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img src="images/brussels.jpg" alt="Brussels" style="width:100%; min-height: 100%">
+              <div class="carousel-caption">
+                <h3>Brussels</h3>
+              </div>
+            </div>
+        
+            <div class="carousel-item">
+              <img src="images/liege.jpg" alt="Liège" style="width:100%; min-height: 100%">
+              <div class="carousel-caption">
+                <h3>Liège</h3>
+              </div>
+            </div>      
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about"> 
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-md-12">
+            <h2>About</h2>
+            <hr>
+            <p>Belgium is known for four (4) things: <strong>fries</strong>, <strong>waffles</strong>, <strong>beer</strong>, and <strong>chocolate</strong>.</p>
+          </div>
+        </div>
             
-    <section id="about" class="aesthetics"> 
-        <h2>About</h2>
-        <p>Belgium is known for four (4) things: <strong>fries</strong>, <strong>waffles</strong>, <strong>beer</strong>, and <strong>chocolate</strong>.</p>
-        <img src="images/fries.jpg" alt="fries" width="500" height="500">
-        <img src="images/waffles.jpg" alt="waffles" width="500" height="500">
-        <img src="images/beer.jpg" alt="beer" width="500" height="500">
-        <img src="images/chocolate.jpg" alt="chocolate" width="500" height="500">
-
-        <p>There are three (3) regions in Belgium: <strong>French Region or Wallonia</strong>, <strong>Flemish Region or Flanders</strong>, and <strong>Brussels-Capital Region</strong>.</p>
-        <img src="images/regions.jpg" alt="regions" width="500" height="500">
-
-        <p>Belgians speak three (3) different languages: <strong>French</strong>, <strong>Dutch</strong>, and <strong>German</strong>.</p>
-        <img src="images/languages.jpg" alt="languages" width="700" height="500">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/fries.jpg" alt="fries" class="img-fluid img-thumbnail mx-auto d-block">
+            <img src="images/waffles.jpg" alt="waffles" class="img-fluid img-thumbnail mx-auto d-block">
+          </div>
+          <div class="col-md-6">
+            <img src="images/beer.jpg" alt="beer" class="img-fluid img-thumbnail mx-auto d-block">
+            <img src="images/chocolate.jpg" alt="chocolate" class="img-fluid img-thumbnail mx-auto d-block">
+          </div>
+        </div>
+        
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-6 col-sm-12">
+            <p>There are three (3) regions in Belgium: <strong>French Region or Wallonia</strong>, <strong>Flemish Region or Flanders</strong>, and <strong>Brussels-Capital Region</strong>.</p>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <img src="images/regions.jpg" id="regions" alt="regions" class="img-fluid rounded mx-auto d-block">
+          </div>
+        </div>
+        
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-6 col-sm-12">
+            <p>Belgians speak three (3) different languages: <strong>French</strong>, <strong>Dutch</strong>, and <strong>German</strong>.</p>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <img src="images/languages.jpg" alt="languages" id="language" class="img-fluid rounded mx-auto d-block">
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="trips" class="aesthetics"> 
-        <h2>Trips</h2>
-        <p>What are your travel goals? We recommend traveling light to experience all Belgium has to offer. </p>
-        <table>
-            <tr>
-                <th class="cities">Brussels</th>
-                <th class="cities">Ghent</th>
-                <th class="cities">Bruges</th>
-            </tr>
-            <tr>
-                <!-- <td class="cities" id="map1">
-                    <iframe width="250" height="250" src="https://maps.google.com/maps?q=liege%20guillemins&t=k&z=15&ie=UTF8&iwloc=&output=embed">
-                </td>
-                <td class="cities" id="map2">
-                    <iframe width="250" height="250" src="https://maps.google.com/maps?q=liege%20guillemins&t=k&z=15&ie=UTF8&iwloc=&output=embed">
-                </td> -->
-                <td class="cities">
-                    <li><a href="http://atomium.be" target="_blank"><span>Atomium</span></a></li>
-                    <img src="images/atomium.jpg" alt="atomium" width="500" height="500">
-                    <li><a href="https://www.brussels.be/manneken-pis" target="_blank"><span>Manneken Pis</span></a></li>
-                    <img src="images/mannekenpis.jpg" alt="mannekenpis" width="500" height="500">
-                </td>
-                <td class="cities">
-                    <li><a href="https://www.tripadvisor.com/Attraction_Review-g188669-d547651-Reviews-Town_Hall_Stadhuis-Leuven_Flemish_Brabant_Province.html" target="_blank"><span>Town Hall (Stadhuis)</span></a></li>
-                    <img src="images/stadhuishall.jpg" alt="stadhuishall" width="500" height="500">
-                    <li><a href="https://www.tripadvisor.com/Attraction_Review-g188669-d2087185-Reviews-Leuven_Train_Station-Leuven_Flemish_Brabant_Province.html" target="_blank"><span>Leuven Train Station</span></a></li>
-                    <img src="images/leuventrainstation.jpg" alt="train station" width="500" height="500">
-                </td>
-                <td class="cities">
-                    <li><a href="https://travel.usnews.com/Bruges_Belgium/Things_To_Do/Markt_62375/" target="_blank"><span>Markt</span></a></li>
-                    <img src="images/markt.jpg" alt="markt" width="500" height="500">
-                    <li><a href="https://travel.usnews.com/Bruges_Belgium/Things_To_Do/Historic_Centre_of_Brugge_62366/" target="_blank"><span>Historic Center of Bruges</span></a></li>
-                    <img src="images/bruges-center.jpg" alt="bruges-center" width="500" height="500">
-                </td>
-            </tr>
-            <tr>
-                <th class="cities">Liège</th>
-                <th class="cities">Mons</th>
-                <th class="cities">Spa-Francorchamps</th>
-            </tr>
-            <tr>
-                <!-- <td class="cities" id="map1">
-                    <iframe width="250" height="250" src="https://maps.google.com/maps?q=liege%20guillemins&t=k&z=15&ie=UTF8&iwloc=&output=embed">
-                </td>
-                <td class="cities" id="map2">
-                    <iframe width="250" height="250" src="https://maps.google.com/maps?q=liege%20guillemins&t=k&z=15&ie=UTF8&iwloc=&output=embed">
-                </td> -->
-                <td class="cities">
-                    <li><a href="https://www.tripadvisor.com/Attraction_Review-g188655-d4056044-Reviews-Montagne_de_Bueren-Liege_Liege_Province_The_Ardennes_Wallonia.html" target="_blank"><span>Montagne de Bueren</span></a></li>
-                    <img src="images/stairs.jpg" alt="stairs" width="500" height="500">
-                    <li><a href="https://www.operaliege.be/en/" target="_blank"><span>Opera Royal de Wallonie-Liege</span></a></li>
-                    <img src="images/opera.jpg" alt="opera" width="500" height="500">
-                </td>
-                <td class="cities">
-                    <li><a href="https://www.tripadvisor.com/Attraction_Review-g188647-d8027749-Reviews-Doudou_s_Museum-Mons_Hainaut_Province_Wallonia.html" target="_blank"><span>Doudou's Museum</span></a></li>
-                    <img src="images/doudou.jpg" alt="doudou" width="500" height="500">
-                    <li><a href="https://www.tripadvisor.com/Attraction_Review-g188647-d10682001-Reviews-Parc_du_Waux_Hall-Mons_Hainaut_Province_Wallonia.html" target="_blank"><span>Manneken Pis</span></a></li>
-                    <img src="images/parc-du-waux-hall.jpg" alt="parc-du-waux-hall" width="500" height="500">
-                </td>
-                <td class="cities">
-                    <li><a href="http://www.spa-francorchamps.be/en" target="_blank"><span>Circuit de Spa Francorchamps</span></a></li>
-                    <img src="images/spafrancorchamps.jpg" alt="spa-francorchamps" width="500" height="500">
-                    <li><a href="https://www.thermesdespa.com/home/" target="_blank"><span>Les Thermes de Spa</span></a></li>
-                    <img src="images/thermesdespa.jpg" alt="thermesdespa" width="500" height="500">
-                </td>
-            </tr>
-        </table>                            
+    <!-- Travel Trips -->
+    <section id="trips"> 
+      <div class="container"> 
+        <div class="alert alert-success col-md-12" role="alert">
+          <h2 class="alert-heading">Trips</h2>
+          <p>What are your travel goals? We recommend traveling light to experience all Belgium has to offer. </p>
+          <hr>
+          <p class="mb-0">Check out our recommended trips below by clicking on the links.</p>
+        </div>    
+    
+        <div class="row">
+          <div class="table-responsive table-responsive-md">
+            
+            <table class="table table-hover">
+              
+              <thead class="thead-dark">
+                <tr>
+                  <th class="cities">Brussels</th>
+                  <th class="cities">Ghent</th>
+                  <th class="cities">Bruges</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                <tr>
+                  <td>
+                      <a href="http://atomium.be" target="_blank" class="badge badge-success"><span>Atomium</span></a>
+                      <img src="images/atomium.jpg" alt="atomium" class="img-fluid mx-auto d-block"> 
+                  </td>
+                  <td>
+                    <a href="https://www.tripadvisor.com/Attraction_Review-g188669-d547651-Reviews-Town_Hall_Stadhuis-Leuven_Flemish_Brabant_Province.html" target="_blank" class="badge badge-success"><span>Town Hall (Stadhuis)</span></a>
+                    <img src="images/stadhuishall.jpg" alt="stadhuishall" class="img-fluid mx-auto d-block">
+                  </td>
+                  <td>
+                    <a href="https://travel.usnews.com/Bruges_Belgium/Things_To_Do/Markt_62375/" target="_blank" class="badge badge-success"><span>Markt</span></a>
+                    <img src="images/markt.jpg" alt="markt" class="img-fluid mx-auto d-block">
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>
+                    <a href="https://www.brussels.be/manneken-pis" target="_blank" class="badge badge-success"><span>Manneken Pis</span></a>
+                    <img src="images/mannekenpis.jpg" alt="mannekenpis" class="img-fluid mx-auto d-block">
+                  </td>
+                  <td>
+                    <a href="https://www.tripadvisor.com/Attraction_Review-g188669-d2087185-Reviews-Leuven_Train_Station-Leuven_Flemish_Brabant_Province.html" target="_blank" class="badge badge-success"><span>Leuven Train Station</span></a>
+                    <img src="images/leuventrainstation.jpg" alt="train station" class="img-fluid mx-auto d-block">
+                  </td>     
+                  <td>
+                    <a href="https://travel.usnews.com/Bruges_Belgium/Things_To_Do/Historic_Centre_of_Brugge_62366/" target="_blank" class="badge badge-success"><span>Historic Center of Bruges</span></a>
+                    <img src="images/bruges-center.jpg" alt="bruges-center" class="img-fluid mx-auto d-block">
+                  </td>
+                </tr>
+
+                <tr class="headings">
+                  <td>Liège</td>
+                  <td>Mons</td>
+                  <td>Spa-Francorchamps</td>
+                </tr>
+                
+                <tr>
+                  <td>
+                      <a href="https://www.tripadvisor.com/Attraction_Review-g188655-d4056044-Reviews-Montagne_de_Bueren-Liege_Liege_Province_The_Ardennes_Wallonia.html" target="_blank" class="badge badge-success"><span>Montagne de Bueren</span></a>
+                      <img src="images/stairs.jpg" alt="stairs" class="img-fluid mx-auto d-block">
+                  </td>
+                  <td>
+                      <a href="https://www.tripadvisor.com/Attraction_Review-g188647-d8027749-Reviews-Doudou_s_Museum-Mons_Hainaut_Province_Wallonia.html" target="_blank" class="badge badge-success"><span>Doudou's Museum</span></a>
+                      <img src="images/doudou.jpg" alt="doudou" class="img-fluid mx-auto d-block">
+                  </td>
+                  <td>
+                      <a href="http://www.spa-francorchamps.be/en" target="_blank" class="badge badge-success"><span>Circuit de Spa Francorchamps</span></a>
+                      <img src="images/spafrancorchamps.jpg" alt="spa-francorchamps" class="img-fluid mx-auto d-block">
+                  </td>
+                </tr>
+                
+                <tr>
+                  <td>
+                    <a href="https://www.operaliege.be/en/" target="_blank" class="badge badge-success"><span>Opera Royal de Wallonie-Liege</span></a>
+                    <img src="images/opera.jpg" alt="opera" class="img-fluid mx-auto d-block">
+                  </td>
+                  <td>
+                    <a href="https://www.tripadvisor.com/Attraction_Review-g188647-d10682001-Reviews-Parc_du_Waux_Hall-Mons_Hainaut_Province_Wallonia.html" target="_blank" class="badge badge-success"><span>Manneken Pis</span></a>
+                    <img src="images/parc-du-waux-hall.jpg" alt="parc-du-waux-hall" class="img-fluid mx-auto d-block">
+                  </td>
+                  <td>
+                    <a href="https://www.thermesdespa.com/home/" target="_blank" class="badge badge-success"><span>Les Thermes de Spa</span></a>
+                    <img src="images/thermesdespa.jpg" alt="thermesdespa" class="img-fluid mx-auto d-block">
+                  </td>
+                </tr>
+              </tbody>     
+            </table>
+
+          </div>
+        </div>
+      </div>                              
     </section>
 
-    <section id="traveltips" class="aesthetics"> 
+    <!-- Tips -->
+    <section id="traveltips">
+      <div class="container traveltips">
         <h2>Travel Tips</h2>
-        <h3>Necessities</h3>
-        <!-- Code from URL: https://www.w3schools.com/icons/. Date pulled: 09/17/2018 -->
-        <li><a href="https://www.x-rates.com/calculator/?from=EUR&to=USD&amount=1" target="_blank"><span class="fa fa-euro"> Conversion Rates</span></a></li>
-        <!-- Code from URL: https://fontawesome.com/v4.7.0/icon/clock-o. Date pulled: 09/17/2018 -->
-        <li><a href="https://www.timeanddate.com/worldclock/belgium/brussels" target="_blank"><span class="fa fa-clock-o"> Central European Summer Time</span></a></li>
-
-        <!-- Info from URL: https://www.belgium.be/en/mobility/public_transport. Date pulled: 09/17/2018 -->
-        <h3>Transportation</h3>
-        <!-- Code from URL: https://www.w3schools.com/icons/. Date pulled: 09/17/2018 -->
-        <li><a href="https://www.brusselsairport.be" target="_blank"><span class="fa fa-plane"> Brussels International Airport</span></a></li>
-        <!-- Code from URL: hhttps://www.w3schools.com/icons/. Date pulled: 09/17/2018 -->
-        <li><a href="https://www.belgianrail.be/en/MySNCB.aspx?returnUrl=/en/MySNCB/MySNCB%20Home.aspx" target="_blank"><span class="fa fa-train"> SNCB</span></a></li>
-        <!-- Code from URL: https://www.w3schools.com/icons/. Date pulled: 09/17/2018 -->
-        <li>
-            <p>There are three (3) bus systems in Belgium:
-            <a href="https://www.delijn.be/nl/" target="_blank"><span class="fa fa-bus"> De Lijn</span></a> | 
-            <a href="https://www.infotec.be" target="_blank" class="fa fa-bus"><span> TEC </span></a> |
-            <a href="http://www.stib-mivb.be/index.htm?l=en" target="_blank" class="fa fa-bus"><span> STIB-MIVB</span></a>
-            </p>
-        </li>
+        <hr>
+        <div class="row">
+          
+          <div class="col-md-6">
+            <h4>Necessities</h4>
+            <ul>
+              <!-- Code from URL: https://www.w3schools.com/icons/. Date pulled: 09/17/2018 -->
+              <li><i class="fas fa-dollar-sign"></i><a href="https://www.x-rates.com/calculator/?from=EUR&to=USD&amount=1" target="_blank"><span><i class="fa fa-euro"></i> Conversion Rates</span></a></li>
+              <!-- Code from URL: https://fontawesome.com/v4.7.0/icon/clock-o. Date pulled: 09/17/2018 -->
+              <li><i class="far fa-clock"></i><a href="https://www.timeanddate.com/worldclock/belgium/brussels" target="_blank"><span><i class="fa fa-clock-o"></i> Central European Summer Time</span></a></li>
+            </ul>
+          </div>
+          
+          <div class="col-md-6">
+            <!-- Info from URL: https://www.belgium.be/en/mobility/public_transport. Date pulled: 09/17/2018 -->
+            <h4>Transportation</h4>
+            <ul>
+              <!-- Code from URL: https://www.w3schools.com/icons/. Date pulled: 09/17/2018 -->
+              <li><i class="fa fa-plane"></i><a href="https://www.brusselsairport.be" target="_blank"><span> Brussels International Airport</span></a></li>
+              <!-- Code from URL: hhttps://www.w3schools.com/icons/. Date pulled: 09/17/2018 -->
+              <li><i class="fa fa-train"></i><a href="https://www.belgianrail.be/en/MySNCB.aspx?returnUrl=/en/MySNCB/MySNCB%20Home.aspx" target="_blank"><span> SNCB</span></a></li>
+              <!-- Code from URL: https://www.w3schools.com/icons/. Date pulled: 09/17/2018 -->
+              <li>Bus Systems - There are three (3) bus systems in Belgium:
+                  <i class="fas fa-bus"></i><a href="https://www.delijn.be/nl/" target="_blank"> De Lijn</a> |
+                  <i class="fas fa-bus"></i><a href="https://www.infotec.be" target="_blank"> TEC</a> |
+                  <i class="fas fa-bus"></i><a href="http://www.stib-mivb.be/index.htm?l=en" target="_blank"> STIB-MIV</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </div> 
     </section>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-</body>
+  </body>
 </html>
-
-<!--         <div class="col-md-6" id="map">
- -->            <!-- Code from URL: https://www.embedgooglemap.net. Date pulled: 09/17/2018 -->
-            <!-- <iframe width="500" height="250" src="https://maps.google.com/maps?q=liege%20guillemins&t=k&z=15&ie=UTF8&iwloc=&output=embed">
-        </div>  -->  
-
