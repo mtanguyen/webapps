@@ -8,7 +8,7 @@
 - You may not use LESS/SASS or mixins -- only standard CSS3.
 - You must use a [fluid grid](https://getbootstrap.com/docs/3.3/css/#grid).  Your page should have a heading/jumbotron that spans the full width, and then must have at least 2 columns.  The columns should fluidly change to a single column on small viewport widths.
 - At least 3 uses of glyphicons.
-- At least one each of Bootstrap labels, badges, and alerts.  And a total of 5 combined.
+- At least one each of Bootstrap badges (labels) and alerts.  And a total of 3 combined.
 - You must have at least 3 [responsive images](https://getbootstrap.com/docs/3.3/css/#images-respondive), that make use of at least 2 of the [image shapes](https://getbootstrap.com/docs/3.3/css/#images-shapes).
 - You must also use a carousel to display at least 3 images.  You may reuse the same images from above.  You may not use the Javascript interface to the carousel -- you must use data attributes instead.
 - You must have a navbar with links into your page that is fluid and ultimately closes to a single button when the viewport is small.  For example, the top image below was taken with viewport size of 1076 while the bottom image was taken with a viewport of 760.
