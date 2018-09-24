@@ -1,0 +1,16 @@
+html{
+/*    crucial bit for getting ems to work */
+    font-size: 100%;
+}
+body{
+    background: #750f5d;
+    background: linear-gradient(to bottom, #750f5d 46%, #ad128 86%, #ea80f2 100%);
+    color: antiquewhite;
+    padding: 0em 1em;
+}
+nav li{
+    display: inline; 
+}
+
+
+/*colorzilla */

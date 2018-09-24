@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <title>Hello, JS!</title>
+    <style>
+        .color {
+            color: green;
+        }
+    </style>
+<!--    defer implies async-->
+    <script src = "hellojs.js" defer></script>
+</head>
+<body>
+   
+    <h1 id="hdr">Hello, JS!</h1>
+<!--
+    <button onclick alert('Teehee');">Cick me!</button> 
+    <button onclick="clicked();">Cick me!</button>    
+-->
+   
+<!--   id must be unique on page -->
+    <button id="clickBut">Cick me!</button>    
+       
+<!--
+    <script>
+        function clicked(){
+            alert('Teehee');   
+        }
+//        let clickBut = document.getElementById('clickBut');
+//        console.log(clickBut);
+//        clickBut.onclick = clicked;
+        
+//        document.getElementById('clickBut').onclick = clicked;
+//        clickBut.onclick = alert('Hello...');
+
+//            clickBut.onclick = function(){
+//                alert('Hello from anonymous function');
+//            };
+        
+//            clickBut.onclick = () => {
+//                alert('Hello from anonymous function');
+//            };
+//        add multiple listeners to same event 
+            clickBut.addEventListener("click", () => {  
+                alert('EventListener ex');
+                
+                
+            });
+//        
+        clickBut.addEventListener("click", ()=>{
+            document.getElementById('hdr').classList.add('color');
+            
+        });
+//        function sayHi(){console.log('Hello');}
+//        let greet = sayHi;
+//        function square(n) {return n*n;}
+//        square(6);
+//        let r = square(10);
+//        let sq = square;
+//        greet; 
+//        
+    </script>
+-->
+</body>
+</html>
+
+
+<!--document.getElementById('clickBut');-->
+<!--function = first class entities/objects -->
+<!--let greet = function(){console.log("Hello");} = lambda function  -->

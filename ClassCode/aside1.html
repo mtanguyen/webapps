@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning with Floats</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+        }
+        
+        aside{
+            background: lightgray; 
+            border: thin dotted black;
+            margin: 1em;
+            /*            top, right, bottom, left*/
+            padding: 0.5em 1em;
+            border-radius: 1em;
+            flex: 1;
+            
+/*
+            float: right;
+            width: 30%;
+*/
+        }
+        main{
+/*            width: 70%;*/
+            padding: 2em;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <h1>Positioning with Flex</h1>
+    <main>
+        <h2>Main Content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates alias non magni magnam aperiam optio rem molestias animi. Ab aperiam perferendis repellendus sapiente impedit. Ipsa accusantium voluptatibus non consequuntur.</p>
+    </main>
+    <aside>
+        <h2>Aside</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem porro, quibusdam minus expedita aliquam quam quae distinctio accusantium impedit qui, architecto, natus quo quasi dolor laudantium facilis. Voluptas, recusandae, necessitatibus.</p>
+    </aside>
+
+   </div>
+
+
+</body>
+</html>
