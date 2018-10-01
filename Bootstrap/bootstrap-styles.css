@@ -1,4 +1,4 @@
-/*This CSS doc will be used to add styling to the bootstrap1.html file.*/
+/*This CSS doc will be used to add styling to the mywebsite.html file.*/
 
 /* Jumbotron CSS */
 	.jumbotron{
@@ -14,9 +14,16 @@
 
 	.jumbotron-text{
 		color: #3620F1;
-		font-family: sans-serif;
+		font-family: courier-new;
 		font-weight: bold;
     	font-size: 3.5em;
+    	text-align: center;
+	}
+
+	.jumbotron-text2{
+		color: #3620F1;
+		font-family: sans-serif;
+    	font-size: 1.0em;
     	text-align: center;
 	}
 
