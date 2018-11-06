@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bar Chart Demo</title>
+</head>
+<body>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div id="chart_div"></div>
+    <button id="add_data">Add 2010 Data</button>
+
+    <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawMultSeries);
+
+        function drawMultSeries() {
+            // const data = google.visualization.arrayToDataTable([
+            //     ['City', '2010 Population', '2000 Population'],
+            //     ['New York City, NY', 8175000, 8008000],
+            //     ['Los Angeles, CA', 3792000, 3694000],
+            //     ['Chicago, IL', 2695000, 2896000],
+            //     ['Houston, TX', 2099000, 1953000],
+            //     ['Philadelphia, PA', 1526000, 1517000]
+            // ]);
+
+            const data = google.visualization.DataTable();
+            // data.addColumn('string','City');
+            // data.addColumn('number','2000 Population');
+            // data.addRow(['New York City, NY', 8008000]);
+            // data.addRow(['Los Angeles, CA', 3694000]);
+            // data.addRow(['Chicago, IL', 2896000]);
+            // data.addRow([['Houston, TX', 1953000]);
+            // data.addRow(['Philadelphia, PA', 1517000]);
+
+            const options = {
+                title: 'Population of Largest U.S. Cities',
+                chartArea: {width: '50%'},
+                hAxis: {
+                    title: 'Total Population',
+                    minValue: 0
+                },
+                vAxis: {
+                    title: 'City'
+                },
+                animation:{
+                    duration: 1000,
+                    easing: 'out'
+                }
+            };
+
+            const chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+
+
+            // button cannot re-assign value
+            const button = document.getElementById('add_data');
+            button.addEventListener('click', (evt) => {
+                data.addColumn('number','2010 Population');
+                data.setCell(0, 2, 8175000]);
+                data.setCell(1, 2, 3792000);
+                data.setCell(2, 2, 2695000);
+                data.setCell(3, 2, 2099000;
+                data.setCell(4, 2, 1526000);
+
+            });
+        }
+    </script>
+
+</body>
+</html>
