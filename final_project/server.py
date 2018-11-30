@@ -203,10 +203,10 @@ def download_report():
     for user in report:
         csv = csv + "%s,%s,%s,%s\n" % (user['username'], user['v1'], user['v2'], user['v3'])
 
-    with TemporaryFile('w+b') as tf:
-        tf.write(csv.encode())
-        tf.seek(0)
-        return send_file(tf, as_attachment=True, attachment_filename="report.csv")
+    tf = TemporaryFile('w+b')
+    tf.write(csv.encode())
+    tf.seek(0)
+    return send_file(tf, as_attachment=True, attachment_filename="report.csv")
 
 
 @app.route('/report/sites', methods=['GET'])
@@ -231,6 +231,18 @@ def get_user_report():
         return jsonify(succeed=False, error="insufficient permissions"), 403
 
     return jsonify(report=get_users_votes(), succeed=True)
+
+
+@app.route('/instructor.html', methods=['GET'])
+def instructor_dashboard():
+    token = session.get('token')
+    user = get_user_from_token(token)
+    if user is None:
+        return jsonify(succeed=False, error="must be logged in"), 403
+    if user[1].lower() != "admin":
+        return jsonify(succeed=False, error="insufficient permissions"), 403
+
+    return send_from_directory('static', 'instructor.html')
 
 
 @app.route('/<path:path>')
