@@ -29,18 +29,10 @@ class Login extends React.Component {
             success: function(response) {
                 console.log(response);
                 if(response.succeed === true){
-                //     localStorage.setItem('userdata', JSON.stringify(response.user));
-                //     $('#loginComponent').hide();
-                //     let user = JSON.parse(localStorage.getItem('userdata'));
-                //     console.log(user);
-                //     if (user.role.toUpperCase() === 'IT') {
-                //         $('#itHome').show();
-                //         getUnassignedTable();
-                //     }
-                //     else
-                //         $('#userHome').show();
-                //     populateUser();
-                //     getAssignedTable();
+                  window.location.href = "/instructor.html";
+                } else {
+                  window.location.href = "/student.html";
+                }
                   console.log("true");
                 }else{
                     // $('#errorMessageLogin').text('Incorrect email and/or password.')
