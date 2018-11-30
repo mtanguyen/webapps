@@ -42,7 +42,7 @@ class UsersFileUpload extends React.Component {
     return (
             <form encType="multipart/form-data" onSubmit={this.uploadHandler}>
                 <input type="file" name="file" onChange={this.fileChangedHandler} />
-                <input type="submit" />
+                <input type="submit" value="Upload" />
             </form>
     );
   }
