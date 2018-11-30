@@ -1,6 +1,3 @@
-// Source: https://reactjs.org/docs/add-react-to-a-website.html
-// Source: http://sahatyalkabov.com/create-a-character-voting-app-using-react-nodejs-mongodb-and-socketio/
-// Date pulled: 11/29/2018 
 class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -65,12 +62,12 @@ class Login extends React.Component {
         <h1>Login</h1>
           <div className="form-group">
             <label htmlFor="usernameInput">Username</label>
-            <input type="text" className="form-control" id="usernameInput"  placeholder="Username" value="{this.state.username}" onChange="{this.handleChangeUser}" />
+            <input type="text" className="form-control" id="usernameInput"  placeholder="Username" value={this.state.username} onChange={this.handleChangeUser} />
           </div>
 
           <div className="form-group">
             <label htmlFor="exampleInputPassword1">Password</label>
-            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" value="{this.state.password}" onChange="{this.handleChangePass}" />
+            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" value={this.state.password} onChange={this.handleChangePass} />
           </div>
         
         <button type="submit" className="btn btn-block">Submit</button>

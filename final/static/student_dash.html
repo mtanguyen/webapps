@@ -34,11 +34,8 @@
           <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="student.html">Dashboard</a>
+          <a class="nav-link" href="student_dash.html">Dashboard</a>
         </li>
-       <!--  <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li> -->
       </ul>
     </div>
 
@@ -83,26 +80,12 @@
           </div>
       </div>
       <!--Grid column-->
-
       <!-- Voting poll -->    
       <form>
-      <div class="form-group" id="rating_container">
+      <div class="form-group">
         <h1>Websites Voting Poll</h1>
-        <label for="exampleFormControlSelect1">Rank #1</label>
         <div id="rating_container"></div>
-          <select>
-            <option value="default">Default</option>
-            <option value="one">Wesbite #1</option>
-            <option value="two">Website #2</option>
-            <option value="three">Website #3</option>
-            <option value="four">Website #4</option>
-            <option value="five">Website #5</option>
-          </select>
-        
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect2">Rank #2</label>
-        <div id="rating_container"></div>
+        <label for="exampleFormControlSelect1">Rank #1: </label>
           <select>
             <option value="default">Default</option>
             <option value="one">Wesbite #1</option>
@@ -113,8 +96,8 @@
           </select>
       </div>
       <div class="form-group">
-        <label for="exampleFormControlSelect3">Rank #3</label>
         <div id="rating_container"></div>
+        <label for="exampleFormControlSelect2">Rank #2: </label>        
           <select>
             <option value="default">Default</option>
             <option value="one">Wesbite #1</option>
@@ -124,22 +107,30 @@
             <option value="five">Website #5</option>
           </select>
       </div>
-
-      <div id="vote_container">
+      <div class="form-group">
+        <div id="rating_container"></div>
+        <label for="exampleFormControlSelect3">Rank #3: </label>        
+          <select>
+            <option value="default">Default</option>
+            <option value="one">Wesbite #1</option>
+            <option value="two">Website #2</option>
+            <option value="three">Website #3</option>
+            <option value="four">Website #4</option>
+            <option value="five">Website #5</option>
+          </select>
+      </div>
         <input onsubmit="Vote();" type="submit" onClick="{this.handleSubmit}"></button>
-      </div>
       </div>
     </form>
 <!--     Voting poll ends -->
-  </div>       
-         
+
+  </div>           
     <!--Grid column-->
      
     </div>
     <!--Grid row-->
 
 </div>
-
 
   <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->

@@ -34,7 +34,7 @@
           <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="instructor.html">Dashboard</a>
+          <a class="nav-link active" href="instructor_dash.html">Dashboard</a>
         </li>
        <!--  <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
@@ -73,12 +73,9 @@
     <h3 id="main-text" style="color: black">Upload Usernames and Passwords</h3>
     <hr>
     <p>Please upload a csv file of usernames, passwords and roles.</p>
-    <div id="upload_container">
-      <form onsubmit="Upload();" method="post" enctype="multipart/form-data" onChange="{this.handleselectedFile}"  >
-      Select file to upload:
-        <input type="file" name="file">
-        <input type="submit" onClick="{this.handleUpload}"></button>
-      </form>
+    <div id="upload_users_container">
+      <input type="file" onChange={this.fileChangedHandler}>
+      <button onClick={this.uploadHandler}>Upload</button>             
     </div>
 
 
@@ -89,12 +86,9 @@
     <h3 id="main-text" style="color: black">Upload Zip File</h3>
     <hr>
     <p>Please upload a zip file of websites to be displayed.</p>
-    <div id="upload_container">
-      <form onsubmit="Upload();" method="post" enctype="multipart/form-data" onChange="{this.handleselectedFile}"  >
-      Select file to upload:
-        <input type="file" name="file">
-        <input type="submit" onClick="{this.handleUpload}"></button>
-      </form>
+    <div id="upload_websites_container">
+      <input type="file" onChange={this.fileChangedHandler}>
+      <button onClick={this.uploadHandler}>Upload</button>         
     </div>
 
   </div>
@@ -172,10 +166,13 @@
     <p>Once the rankings are ready, you can download a report with all the results.</p>
     <!-- <button type="submit" class="btn btn-primary mb-2">Download</button> -->
     <div id="download_container">
-      <form onsubmit="Download();" method="post" enctype="multipart/form-data" onChange="{this.handleselectedFile}"  >
+<!--       <form onsubmit="Download();" method="post" enctype="multipart/form-data" onChange="{this.changeFile}"  >
       Download file here:
         <input type="submit" onClick="{this.handleDownload}"></button>
-      </form>
+      </form> -->
+
+      <button label="Download file" onClick={this.downloadFile}>Download Report</button>
+
     </div>
 
 
@@ -186,7 +183,8 @@
 
   <!-- Load React component. -->
   <script src="download.js"></script>
-  <script src="upload.js"></script>
+  <script src="upload_websites.js"></script>
+  <script src="upload_users.js"></script>
 
 </body>
 </html>

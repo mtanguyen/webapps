@@ -1,46 +1,72 @@
-// Source: https://reactjs.org/docs/add-react-to-a-website.html
-// Source: https://medium.freecodecamp.org/how-to-create-file-upload-with-react-and-node-2aa3f9aab3f0
-// Source: https://www.zeolearn.com/magazine/connecting-reactjs-frontend-with-nodejs-backend
-// Date pulled: 11/29/2018 
+// Source: http://4youngpadawans.com/download-file-from-server-react-and-spring/
+// Date pulled: 11/30/2018 
 
 import React, { Component } from 'react';
-import axios from 'axios';
+import { FileService } from '../services/file-service.jsx';
+import { Button } from 'primereact/components/button/Button';
+import { saveAs } from 'file-saver';
 
-class Download extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { selectedFile: null, loaded: 0, }
-    this.handleselectedFile = this.handleselectedFile.bind(this);
-    this.handleUpload = this.handleDownload.bind(this);
-  
+class DownloadFile extends Component {
+    constructor() {
+        super();
+        this.fileService = new FileService();
+        this.state = {downloading: false};
+        this.handleDownload = this.handleDownload.bind(this);
 
-handleselectedFile = event => {
-    this.setState({
-      selectedFile: event.target.files[0],
-      loaded: 0,
-    })
+    }
+
+    extractFileName = (contentDispositionValue) => {
+         var filename = "";
+         if (contentDispositionValue && contentDispositionValue.indexOf('attachment') !== -1) {
+             var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+             var matches = filenameRegex.exec(contentDispositionValue);
+             if (matches != null && matches[1]) {
+                 filename = matches[1].replace(/['"]/g, '');
+             }
+         }
+         return filename;
+     }
+
+    handleDownload(event) {    
+    $.ajax({
+            type: 'GET',
+            url: '/download/report',
+            data: JSON.stringify({
+              state: this.state.state,
+            }),
+
+            downloadFile = () => {
+              this.setState({ downloading: true });
+              let self = this;
+              this.fileService.getFileFromServer("file").then((response) => {
+                console.log("Response", response);
+                this.setState({ downloading: false});
+                //extract file name from Content-Disposition header
+                var filename=this.extractFileName(response.headers['content-disposition']);
+                console.log("File name",filename);
+                //invoke 'Save As' dialog
+                saveAs(response.data, filename);
+            }).catch(function (error) {
+            console.log(error);
+            self.setState({ downloading: false });
+            if (error.response) {
+                console.log('Error', error.response.status);
+            } else {
+                console.log('Error', error.message);
+            }
+        });
+    };
+        
+    event.preventDefault();
   }
 
-handleDownload = () => {
-    const data = new FormData()
-    data.append('file', this.state.selectedFile, this.state.selectedFile.name)
-
- //    fetch('http://localhost:4000/upload', {
- //     method: 'POST', 
- //     body: data}).then(response => {
- //       response.json().then(body => {
- //         this.setState({ fileURL: `http://localhost:4000/${body.file}` });
- //       });
-  //  });
-  // }
-
-  axios.post('/files', data).then((response) => {
-      this.setState({
-        selectedFile: response.data.fileUrl
-      })
-    })
+    render() {
+        console.log("state",this.state);
+        return (
+          <button label="Download file" onClick={this.downloadFile}>Download</button>
+        )
+    };
 }
 
-
 const domContainer = document.querySelector('#download_container');
-ReactDOM.render(Download(), domContainer);
+ReactDOM.render(e(DownloadFile), domContainer);
