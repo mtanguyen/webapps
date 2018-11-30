@@ -1,0 +1,135 @@
+URL: /
+Method: GET
+Description: Main landing page (probably the sign in page)
+Request Data: None
+Response: 200 + index.html
+
+URL: /login
+Method: POST
+Description: Submit user credentials to be logged in. This creates a session token cookie, 'token', and a username cookie, 'username'.
+Request Data: User credential object...
+{
+  "username": "...",
+  "password": "..."
+}
+Response 200: session cookies + role object... // You guys will have to redirect based on role's value
+{
+  "succeed": true,
+  "role": 'admin' or 'student'
+}
+Response 403: // login failed 
+{
+  "succeed": False,
+  "error": "..."
+}
+
+URL: /logout
+Method: POST
+Description: Removes cookies and deletes session from DB.
+Request Data: None
+Response: 200 + remove session cookies
+
+URL: /vote
+Method: POST
+Description: Submit the user's 1st, 2nd, and 3rd favorite websites.
+Request Data: Vote object - v1, v2 and v3,
+    with the username of the website that was voted for each one.
+{
+  "v1": ",
+  "v2": 1,
+  "v3": 2
+}
+Response: 200
+
+URL: /websites
+Method: GET
+Description: Returns the (randomly arranged) listing of all the websites available.
+Request Data: None
+Response: 200 + site array...
+{
+  "succeed": true,
+  "websites": [
+    {
+      "username": "Student1Site"
+    },
+    ...
+  ]
+}
+
+URL: /upload/users
+Method: POST
+Description: Upload a .csv of users to add to database.
+Request Data: CSV in format -> username,password,role
+    CSV must be uploaded in form with tag 'enctype="multipart/form-data"'.
+Response: 200 + ...
+{
+  "succeed": true
+}
+Response: 400 + list of users not added
+// 400 is for when some users could not be added
+{
+  "succeed": false,
+  "error": "at least 1 user failed to add",
+  "users": [
+    {
+      "username": "...",
+      "password": "...",
+      "role": "..."
+    },
+    ...
+  ]
+}
+
+URL: /upload/websites
+Method: POST
+Description: Upload a .zip of student websites.
+Request Data: .zip with student's websites in individual folders in zip.
+Response: 200 + ...
+{
+  "succeed": true
+}
+Response: 400 + ...
+{
+  "succeed": false,
+  "error": "..."
+}
+
+URL: /report/users
+Method: GET
+Description: (admin only) See all students and what they voted for.
+Request Data: None
+Response: 200 + User array
+{
+  "succeed": true,
+  "report": [
+    {
+      "username": "...",
+      "v1": "Student1Site",
+      "v2": "Student2Site",
+      "v3": "Student3Site"
+    },
+  ...
+  ]
+}
+
+URL: /download/report
+Method: GET
+Description: (admin only) Download a csv of above report
+Request Data: None
+Response: 200 + report.csv
+
+URL: /report/sites
+Method: GET
+Description: (admin only) See all websites in order.
+Request Data: None
+Response: 200 + Site array
+{
+  "succeed": true,
+  "report": [
+    {
+      "username": "Student1Site",
+      "points": 15
+    },
+    ...
+  ]
+}
