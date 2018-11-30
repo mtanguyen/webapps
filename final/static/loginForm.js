@@ -29,14 +29,14 @@ class Login extends React.Component {
             success: function(response) {
                 console.log(response);
                 if(response.succeed === true){
-                  window.location.href = "/instructor.html";
-                } else {
-                  window.location.href = "/student.html";
-                }
-                  console.log("true");
+                  if (response.role === "admin") {
+                    window.location.href = "/instructor.html";
+                  } else {
+                    window.location.href = "/student.html";
+                  }
                 }else{
-                    // $('#errorMessageLogin').text('Incorrect email and/or password.')
-                    console.log(response);
+                  // $('#errorMessageLogin').text('Incorrect email and/or password.')
+                  console.log(response);
                 }
             },
             error: function(error) {
