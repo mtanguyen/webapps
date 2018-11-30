@@ -106,31 +106,8 @@
     <h3 id="main-text" style="color: black">Ranking Report</h3>
     <hr>
 
-    <table class="table table-hover table-light mb-5" style="color: black">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Website Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Website 4</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Website 1</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Website 10</td>
-
-        </tr>
-      </tbody>
-    </table>
-    
-    <div id="wrapper"></div>
+    <div id="sitesWrapper"></div>
+    <div id="usersWrapper"></div>
 
     <p>Once the rankings are ready, you can download a report with all the results.</p>
     <!-- <button type="submit" class="btn btn-primary mb-2">Download</button> -->
@@ -157,17 +134,14 @@
             
           
             success: function(response) {
-                console.log(response);
                 if(response.succeed){
                   var table = '<table class="table table-hover table-dark mb-5"><thead><tr><th scope="col">#</th><th scope="col">Username</th><th scope="col">Rank #1</th><th scope="col">Rank #2</th><th scope="col">Rank #3</th></tr></thead><tbody>'
                   var i;
                   for(i = 0; i < response.report.length; i++) {
-                    console.log(response.report[i].username);
-                    table += '<tr><th scope="row">' + (i + 1) + '</th><td>' + response.report[i].username + '</td><td>' + response.report[i].v1 + '</td><td>' + response.report[i].v2 + '</td><td>' + response.report[i].v3 + '</td><tr>';
+                    table += '<tr><th scope="row">' + (i + 1) + '</th><td>' + response.report[i].username + '</td><td>' + response.report[i].v1 + '</td><td>' + response.report[i].v2 + '</td><td>' + response.report[i].v3 + '</td></tr>';
                   }
-                  table += '</table>';
-                  console.log(table);
-                  $('#wrapper').html(table);
+                  table += '</tbody></table>';
+                  $('#usersWrapper').html(table);
                   
                     
                 }else{
@@ -178,9 +152,35 @@
             error: function(error) {
                 console.log(error);
             }
-        });   
+        });
+
+        $.ajax({
+            type: 'GET',
+            url: '/report/sites',
+            
+          
+            success: function(response) {
+                if(response.succeed){
+                  var table = '<table class="table table-hover table-light mb-5" style="color: black"><thead><tr><th scope="col">#</th><th scope="col">Website Name</th></tr></thead><tbody>'
+                  var i;
+                  for(i = 0; i < response.report.length; i++) {
+                    table += '<tr><th scope="row">' + (i + 1) + '</th><td>' + response.report[i].username + '</td></tr>';
+                  }
+                  table += '</tbody></table>';
+                  $('#sitesWrapper').html(table);
+                  
+                    
+                }else{
+                    // $('#errorMessageLogin').text('Incorrect email and/or password.')
+                    console.log(response);
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });      
   </script>
-    
+
 </body>
 </html>
 
