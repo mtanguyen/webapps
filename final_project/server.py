@@ -104,15 +104,10 @@ def vote():
         return jsonify(succeed=False), 403
 
     # Get votes from request
-    v1 = None
-    v2 = None
-    v3 = None
-    if 'v1' in request.values:
-        v1 = request.values['v1']
-    if 'v2' in request.values:
-        v2 = request.values['v2']
-    if 'v3' in request.values:
-        v3 = request.values['v3']
+    json = request.get_json(force=True)
+    v1 = json['v1']
+    v2 = json['v2']
+    v3 = json['v3']
 
     # Add votes to database
     if v1 is not None:

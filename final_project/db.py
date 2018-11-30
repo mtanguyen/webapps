@@ -79,15 +79,14 @@ def add_vote(username, votenum, sitename):
     try:
         cur.execute('INSERT INTO votes(username, votenum, sitename) VALUES (?, ?, ?);',
                     (username, votenum, sitename))
+        con.commit()
+        cur.close()
+        con.close()
     except sql.IntegrityError:
         con.rollback()
         cur.close()
         con.close()
         update_vote(username, votenum, sitename)
-
-    con.commit()
-    cur.close()
-    con.close()
 
 
 def update_vote(username, votenum, sitename):
