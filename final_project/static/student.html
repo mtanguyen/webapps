@@ -11,9 +11,10 @@
 
   <link href="css/dashboard.css" rel="stylesheet">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 
 </head>
 <body>
@@ -76,7 +77,7 @@
       <!--Grid column-->
       <div class="col">
           <div class="embed-responsive embed-responsive-16by9 z-depth-1">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fa3Iczgh8Ok" style="height: 100%" allowfullscreen></iframe>          
+            <iframe class="embed-responsive-item" src="" style="height: 100%" allowfullscreen></iframe>          
           </div>
 	  <label for="iframeSelect">Please choose a site to view:</label>
             <select class="vote-select" id="iframeSelect">
@@ -84,56 +85,29 @@
       </div>
       <!--Grid column-->
       <!-- Voting poll -->    
-      <form>
+        <form id="vote-form" onsubmit="vote">
       <div class="form-group">
         <h1>Websites Voting Poll</h1>
         <div id="rating_container"></div>
-        <label for="exampleFormControlSelect1">Rank #1: </label>
-          <select>
-            <option value="default">Default</option>
-            <option value="one">Wesbite #1</option>
-            <option value="two">Website #2</option>
-            <option value="three">Website #3</option>
-            <option value="four">Website #4</option>
-            <option value="five">Website #5</option>
-          </select>
+        <label for="rank1">Rank #1: </label>
+          <select class="vote-select" id="rank1" form="vote-form"></select>
       </div>
       <div class="form-group">
         <div id="rating_container"></div>
-        <label for="exampleFormControlSelect2">Rank #2: </label>        
-          <select>
-            <option value="default">Default</option>
-            <option value="one">Wesbite #1</option>
-            <option value="two">Website #2</option>
-            <option value="three">Website #3</option>
-            <option value="four">Website #4</option>
-            <option value="five">Website #5</option>
-          </select>
+        <label for="rank2">Rank #2: </label>
+          <select class="vote-select" id="rank2" form="vote-form"></select>
       </div>
       <div class="form-group">
         <div id="rating_container"></div>
-        <label for="exampleFormControlSelect3">Rank #3: </label>        
-          <select>
-            <option value="default">Default</option>
-            <option value="one">Wesbite #1</option>
-            <option value="two">Website #2</option>
-            <option value="three">Website #3</option>
-            <option value="four">Website #4</option>
-            <option value="five">Website #5</option>
-          </select>
+        <label for="rank3">Rank #3: </label>      
+          <select class="vote-select" id="rank3" form="vote-form"></select>
       </div>
-        <input onsubmit="Vote();" type="submit" onClick="{this.handleSubmit}"></button>
+        <input type="submit">
+        </form>
+        
       </div>
-    </form>
-<!--     Voting poll ends -->
-
   </div>           
-    <!--Grid column-->
-     
-    </div>
-    <!--Grid row-->
 
-</div>
 
   <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
@@ -141,15 +115,9 @@
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
 
   <!-- Load React component. -->
-  <script type="text/babel" src="vote.js"></script>
-  <script type="text/babel" src="rating.js"></script>
+<!--  <script type="text/babel" src="vote.js"></script>-->
+<!--  <script type="text/babel" src="rating.js"></script>-->
 
-  <script type="text/javascript">
-    $("#iframeSelect").change(function () {
-      // alert("/sites/" + this.value + "/index.html");
-      $("#sitePreview").attr('src', "/sites/" + this.value + "/index.html");
-    })
-  </script>
 
 </body>
 </html>
