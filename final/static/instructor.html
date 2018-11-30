@@ -34,7 +34,7 @@
           <a class="nav-link" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="instructor_dash.html">Dashboard</a>
+          <a class="nav-link active" href="instructor.html">Dashboard</a>
         </li>
        <!--  <li class="nav-item">
           <a class="nav-link" href="contact.html">Contact</a>
@@ -77,9 +77,6 @@
       <input type="file" onChange={this.fileChangedHandler}>
       <button onClick={this.uploadHandler}>Upload</button>             
     </div>
-
-
-    </form>
   
     <br><br><br>
 
@@ -91,89 +88,16 @@
       <button onClick={this.uploadHandler}>Upload</button>         
     </div>
 
-  </div>
-
-  <!-- Third Container -->
-  <div class="container-fluid bg-3 text-center fill" id="download">
-
+    <br><br><br>
     <h3 id="main-text" style="color: black">Ranking Report</h3>
     <hr>
-
-    <table class="table table-hover table-light mb-5" style="color: black">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Website Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Website 4</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Website 1</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Website 10</td>
-
-        </tr>
-      </tbody>
-    </table>
-
-    <table class="table table-hover table-dark mb-5">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">Rank #1</th>
-          <th scope="col">Rank #2</th>
-          <th scope="col">Rank #3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>Website 4</td>
-          <td>Website 4</td>
-          <td>Website 4</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>Website 4</td>
-          <td>Website 4</td>
-          <td>Website 4</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>Website 4</td>
-          <td>Website 4</td>
-          <td>Website 4</td>
-        </tr>
-      </tbody>
-    </table>
-
-  
     <p>Once the rankings are ready, you can download a report with all the results.</p>
     <!-- <button type="submit" class="btn btn-primary mb-2">Download</button> -->
     <div id="download_container">
-<!--       <form onsubmit="Download();" method="post" enctype="multipart/form-data" onChange="{this.changeFile}"  >
-      Download file here:
-        <input type="submit" onClick="{this.handleDownload}"></button>
-      </form> -->
-
       <button label="Download file" onClick={this.downloadFile}>Download Report</button>
 
     </div>
+  </div>
 
 
   <!-- Load React. -->
