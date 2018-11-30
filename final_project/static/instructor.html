@@ -72,18 +72,21 @@
 
   <!-- Second Container -->
   <div class="container-fluid bg-2 text-center fill" id="upload">
-    
-    <h3 id="main-text" style="color: black">Upload Usernames and Passwords</h3>
-    <hr>
-    <p>Please upload a csv file of usernames, passwords and roles.</p>
-      <div id="upload_users_container"></div>
-  
-    <br><br><br>
-
-    <h3 id="main-text" style="color: black">Upload Zip File</h3>
-    <hr>
-    <p>Please upload a zip file of websites to be displayed.</p>
-      <div id="upload_websites_container"></div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3 id="main-text" style="color: black">Upload Usernames and Passwords</h3>
+        <hr>
+        <p>Please upload a csv file of usernames, passwords and roles.</p>
+        <div id="upload_users_container"></div>
+      </div>
+      <div class="col-sm-6">
+        <h3 id="main-text" style="color: black">Upload Zip File</h3>
+        <hr>
+        <p>Please upload a zip file of websites to be displayed.</p>
+        <div id="upload_websites_container"></div>
+      </div>
+    </div>
+  </div>
 <!--
       <input type="file" onChange={this.fileChangedHandler}>
       <button onClick={this.uploadHandler}>Upload</button>         
