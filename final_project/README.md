@@ -28,16 +28,15 @@ Your server will now be running on localhost port 8080.
 
 To view this app in a browser on the machine it is running, go to the url http://localhost:8080
 
-Now to start the database off as an admin, go to your site running on port 8080 and log in with the
-following credentials:
+Once you are on the localhost, log in as an admin to start the database off. Go to your site running on port 8080 and log in with the following credentials:
 
 * username: admin
 
 * password: admin
 
-From there, you can access the instructor dashboard, and most importantly, upload a csv file
-containing login information. This way you can establish your own instructor account, as well as the
-necessary student accounts.
+Once logged in, access the instructor dashboard to upload a CSV file for users login credentials. As an instructor or TA, another feature is to add a zipped file of the sites. At the bottom, instructors and TAs can see the voting poll and download a CSV report. 
+
+For the student dashboard, you will see different sites and vote. Note: students can only vote once. 
 
 ## Administration
 
