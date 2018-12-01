@@ -13,7 +13,7 @@ Install flask and passlib python libraries.
 ```
 pip install flask
 
-pip install passlib
+pip install bcrypt
 ```
 That's it! See deployment for further instructions.
 
