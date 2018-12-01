@@ -1,4 +1,4 @@
-var vote = (event) => {
+var vote = () => {
     event.preventDefault();
     v1 = $('#rank1')[0].value;
     v2 = $('#rank2')[0].value;
@@ -8,35 +8,30 @@ var vote = (event) => {
     $.ajax({
         type: 'POST',
         url: '/vote',
+        contentType: 'application/json',
+        dataType: 'application/json',
         data: JSON.stringify(data),
         success: function(response) {
-            console.log(response);
             if (response.succeed === true) {
-                $("#voteSuccess").show();
-                $("#voteFail").hide();
+                // TODO: Handle success
             } else {
-                $("#voteSuccess").hide();
-                $("#voteFail").show();
+                // TODO: Handle fail
             }
-        },
-        error: function(response) {
-            $("#voteSuccess").hide();
-                $("#voteFail").show();
         }
     });
 }
 
-// $(function() {
-    $("#vote-form").submit(vote);
+$(function() {
+    $("#vote-form").on("submit", vote);
     
     $.ajax({
         type: 'GET',
         url: '/websites',
+        contentType: 'application/json',
         success: function(response) {
             if (response.succeed === true) {
                 var sites = response.websites;
                 sites = sites.map(v => v.username);
-                $("#sitePreview").attr('src', "/sites/" + sites[0] + "/index.html");
                 sites.forEach(n => {
                     $(".vote-select").append($("<option>" + n + "</option>"));
                 });
@@ -45,4 +40,8 @@ var vote = (event) => {
             }
         }
     });
-// });
+    
+    $("#iframeSelect").on("change", function(event) {
+        $("iframe").attr('src', '/sites/' + event.target.value + '/index.html')
+    });
+});

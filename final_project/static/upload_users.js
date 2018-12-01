@@ -10,7 +10,7 @@ const e = React.createElement;
 class UsersFileUpload extends React.Component {
     constructor(props) {
         super(props);
-        this. state = {selectedFile: null};
+        this. state = {selectedFile: null, failedUsers: []};
         this.fileChangedHandler= this.fileChangedHandler.bind(this);
         this.uploadHandler= this.uploadHandler.bind(this);
     }
@@ -40,8 +40,16 @@ class UsersFileUpload extends React.Component {
                 }  
             },
             error: response => {
-                console.log(response);
+                console.log(response.responseJSON.users);
+                this.state.failedUsers = response.responseJSON.users.map(n => n[0]);
+                console.log(this.state.failedUsers);
                 $("#userSuccess").hide();
+                $("#userFail").empty();
+                $("#userFail").append("Update Failed for these users:")
+                this.state.failedUsers.slice(0, -1).forEach(n => $("#userFail").append(" "+n+","));
+                $("#userFail").append(" "+this.state.failedUsers.pop());
+//                $("#userFail").append(this.state.failedUsers.reduce((acc, n) => acc + <p>{n}</p>));
+
                 $("#userFail").show();
             }
         });
