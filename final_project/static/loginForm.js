@@ -49,20 +49,26 @@ class Login extends React.Component {
                         window.location.href = "/student.html";
                     }
                 }else{
-                    // $('#errorMessageLogin').text('Incorrect email and/or password.')
-                    console.log(response);
+                    $("#incorrectLogin").show();
                 }
             },
             error: function(error) {
-                console.log(error);
+                $("#incorrectLogin").show();
             }
         });   
   }
 
   render() {
+    var divStyle = {
+      textAlign: 'center',
+      display: 'none'
+    };
     return (
       <form className="form-container" onSubmit={this.handleSubmit}>
         <h1>Login</h1>
+        <div id="incorrectLogin" className="alert alert-danger" role="alert" style={divStyle}>
+          Incorrect Login
+        </div>
           <div className="form-group">
             <label htmlFor="usernameInput">Username</label>
             <input type="text" className="form-control" id="usernameInput"  placeholder="Username" value={this.state.username} onChange={this.handleChangeUser} />

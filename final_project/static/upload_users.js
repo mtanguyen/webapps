@@ -31,19 +31,39 @@ class UsersFileUpload extends React.Component {
             processData: false,
             success: response => {
                 console.log(response);
+                if(response.succeed === true) {
+                    $("#userSuccess").show();
+                    $("#userFail").hide();
+                } else {
+                    $("#userSuccess").hide();
+                    $("#userFail").show();
+                }  
             },
             error: response => {
                 console.log(response);
+                $("#userSuccess").hide();
+                $("#userFail").show();
             }
         });
     }
 
   render() {
+    var divStyle = {
+      textAlign: 'center',
+      display: 'none'
+    };
     return (
             <form encType="multipart/form-data" onSubmit={this.uploadHandler}>
                 <input type="file" name="file" onChange={this.fileChangedHandler} />
                 <input type="submit" value="Upload" />
+                <div id="userSuccess" className="alert alert-primary" role="alert" style={divStyle}>
+                    Upload Successful
+                </div>
+                <div id="userFail" className="alert alert-primary" role="alert" style={divStyle}>
+                    Upload Failed
+                </div>
             </form>
+            
     );
   }
 }

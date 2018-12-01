@@ -24,27 +24,48 @@ class WebsitesFileUpload extends React.Component {
       const formData = new FormData()
       formData.append('file', this.state.selectedFile, this.state.selectedFile.name)
 
+
         $.ajax({
             type: 'POST',
             url: '/upload/websites',
             data: formData,
             contentType: false,
             processData: false,
-            success: response => {
+        success: response => {
                 console.log(response);
+                if(response.succeed === true) {
+                    $("#sitesSuccess").show();
+                    $("#sitesFail").hide();
+                } else {
+                    $("#sitesSuccess").hide();
+                    $("#sitesFail").show();
+                }  
             },
             error: response => {
                 console.log(response);
+                $("#sitesSuccess").hide();
+                $("#sitesFail").show();
             }
         });
     }
 
     render() {
+        var divStyle = {
+      textAlign: 'center',
+      display: 'none'
+    };
         return (
             <form encType="multipart/form-data" onSubmit={this.uploadHandler}>
                 <input type="file" name="file" onChange={this.fileChangedHandler} />
                 <input type="submit" value="Upload" />
+                <div id="sitesSuccess" className="alert alert-primary" role="alert" style={divStyle}>
+                Upload Successful
+            </div>
+            <div id="sitesFail" className="alert alert-primary" role="alert" style={divStyle}>
+                Upload Failed
+            </div>
             </form>
+            
         );
     }
 }
