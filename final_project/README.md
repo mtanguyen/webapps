@@ -18,8 +18,7 @@ pip install passlib
 That's it! See deployment for further instructions.
 
 On MacOS and Linux: 
-To install flask, go here: http://flask.pocoo.org/docs/1.0/installation/
-If the site above doesn't work, go here: http://flask.pocoo.org/docs/0.12/installation/
+To install flask, go here: http://flask.pocoo.org/docs/1.0/installation/. If the other site above doesn't work, go here: http://flask.pocoo.org/docs/0.12/installation/
 
 ## Deployment
 
