@@ -13,7 +13,7 @@ Install flask and passlib python libraries.
 ```
 pip install flask
 
-pip install passlib
+pip install bcrypt
 ```
 That's it! See deployment for further instructions.
 
@@ -21,11 +21,11 @@ That's it! See deployment for further instructions.
 
 Run app.py.
 
-Your server will now be running on localhost port 5000.
+Your server will now be running on localhost port 8080.
 
-To view this app in a browser on the machine it is running, go to the url http://localhost:5000
+To view this app in a browser on the machine it is running, go to the url http://localhost:8080
 
-Now to start the database off as an admin, go to your site running on port 5000 and log in with the
+Now to start the database off as an admin, go to your site running on port 8080 and log in with the
 following credentials:
 
 * username: admin
