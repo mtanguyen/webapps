@@ -36,6 +36,7 @@ var vote = (event) => {
             if (response.succeed === true) {
                 var sites = response.websites;
                 sites = sites.map(v => v.username);
+                $("#sitePreview").attr('src', "/sites/" + sites[0] + "/index.html");
                 sites.forEach(n => {
                     $(".vote-select").append($("<option>" + n + "</option>"));
                 });
