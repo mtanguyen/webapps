@@ -9,15 +9,21 @@ var vote = () => {
         type: 'POST',
         url: '/vote',
         contentType: 'application/json',
-        dataType: 'application/json',
         data: JSON.stringify(data),
         success: function(response) {
+            console.log("success");
             if (response.succeed === true) {
-                // TODO: Handle success
+                $("#voteFail").hide();
+                $("#voteSuccess").show();
             } else {
-                // TODO: Handle fail
+                $("#voteSuccess").hide();
+                $("#voteFail").show();
             }
-        }
+        },
+        error: function(response) {
+            $("#voteSuccess").hide();
+            $("#voteFail").show();
+        },
     });
 }
 
