@@ -19,7 +19,7 @@ On MacOS and Linux: To install flask, go here: http://flask.pocoo.org/docs/1.0/i
 
 ## Deployment
 
-Run python server.py on terminal or command prompt.
+Run `python server.py` on terminal or command prompt.
 
 Your server will now be running on localhost port 8080.
 
