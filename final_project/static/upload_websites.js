@@ -61,7 +61,7 @@ class WebsitesFileUpload extends React.Component {
                 <div id="sitesSuccess" className="alert alert-primary" role="alert" style={divStyle}>
                 Upload Successful
             </div>
-            <div id="sitesFail" className="alert alert-primary" role="alert" style={divStyle}>
+            <div id="sitesFail" className="alert alert-danger" role="alert" style={divStyle}>
                 Upload Failed
             </div>
             </form>

@@ -1,4 +1,4 @@
-var vote = () => {
+var vote = (event) => {
     event.preventDefault();
     v1 = $('#rank1')[0].value;
     v2 = $('#rank2')[0].value;
@@ -8,19 +8,26 @@ var vote = () => {
     $.ajax({
         type: 'POST',
         url: '/vote',
-        data: data,
+        data: JSON.stringify(data),
         success: function(response) {
+            console.log(response);
             if (response.succeed === true) {
-                // TODO: Handle success
+                $("#voteSuccess").show();
+                $("#voteFail").hide();
             } else {
-                // TODO: Handle fail
+                $("#voteSuccess").hide();
+                $("#voteFail").show();
             }
+        },
+        error: function(response) {
+            $("#voteSuccess").hide();
+                $("#voteFail").show();
         }
     });
 }
 
-$(function() {
-    $("#vote-form").on("submit", vote);
+// $(function() {
+    $("#vote-form").submit(vote);
     
     $.ajax({
         type: 'GET',
@@ -37,4 +44,4 @@ $(function() {
             }
         }
     });
-});
+// });
