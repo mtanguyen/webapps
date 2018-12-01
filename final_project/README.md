@@ -7,7 +7,7 @@ Website Grader is a website designed to allow instructors and TAs to manage stud
 Python 3
 
 ### Installing
-
+On Windows OS: 
 Install flask and passlib python libraries.
 
 ```
@@ -17,15 +17,19 @@ pip install passlib
 ```
 That's it! See deployment for further instructions.
 
+On MacOS and Linux: 
+To install flask, go here: http://flask.pocoo.org/docs/1.0/installation/
+If the site above doesn't work, go here: http://flask.pocoo.org/docs/0.12/installation/
+
 ## Deployment
 
-Run app.py.
+Run python server.py on terminal or command prompt.
 
-Your server will now be running on localhost port 5000.
+Your server will now be running on localhost port 8080.
 
-To view this app in a browser on the machine it is running, go to the url http://localhost:5000
+To view this app in a browser on the machine it is running, go to the url http://localhost:8080
 
-Now to start the database off as an admin, go to your site running on port 5000 and log in with the
+Now to start the database off as an admin, go to your site running on port 8080 and log in with the
 following credentials:
 
 * username: admin
@@ -72,7 +76,6 @@ Once you have your accounts uploaded, you can use the site.
 * [Bootstrap](https://getbootstrap.com/) - Front-end style library
 * [React](https://reactjs.org) - Front-end web interface 
 * [HTML/CSS/JS] - Front-end style library
-
 
 ## Authors
 
