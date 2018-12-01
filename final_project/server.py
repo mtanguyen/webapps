@@ -104,10 +104,12 @@ def vote():
         return jsonify(succeed=False), 403
 
     # Get votes from request
-    req = request.get_json()
-    v1 = req.get('v1')
-    v2 = req.get('v2')
-    v3 = req.get('v3')
+    json = request.get_json(force=True)
+    v1 = json['v1']
+    v2 = json['v2']
+    v3 = json['v3']
+    if v1 in (v2, v3) or v2 == v3:
+        return jsonify(succeed=False, error="only one vote per website is allowed")
 
     # Add votes to database
     if v1 is not None:
