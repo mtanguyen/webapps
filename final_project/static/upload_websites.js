@@ -57,7 +57,7 @@ class WebsitesFileUpload extends React.Component {
         return (
             <form encType="multipart/form-data" onSubmit={this.uploadHandler}>
                 <input type="file" name="file" onChange={this.fileChangedHandler} />
-                <input type="submit" value="Upload" />
+                <input type="submit" className="btn btn-primary" value="Upload" />
                 <div id="sitesSuccess" className="alert alert-primary" role="alert" style={divStyle}>
                 Upload Successful
             </div>
