@@ -7,18 +7,15 @@ Website Grader is a website designed to allow instructors and TAs to manage stud
 Python 3
 
 ### Installing
-On Windows OS: 
-Install flask and passlib python libraries.
+On Windows OS: Install flask and passlib python libraries.
 
 ```
 pip install flask
 
 pip install bcrypt
 ```
-That's it! See deployment for further instructions.
 
-On MacOS and Linux: 
-To install flask, go here: http://flask.pocoo.org/docs/1.0/installation/. If the other site above doesn't work, go here: http://flask.pocoo.org/docs/0.12/installation/
+On MacOS and Linux: To install flask, go here: http://flask.pocoo.org/docs/1.0/installation/. If the other site above doesn't work, go here: http://flask.pocoo.org/docs/0.12/installation/
 
 ## Deployment
 
@@ -36,7 +33,7 @@ Once you are on the localhost, log in as an admin to start the database off. Go 
 
 Once logged in, access the instructor dashboard to upload a CSV file for users login credentials. As an instructor or TA, another feature is to add a zipped file of the sites. At the bottom, instructors and TAs can see the voting poll and download a CSV report. 
 
-For the student dashboard, you will see different sites and vote. Note: students can only vote once. 
+For the student dashboard, you will see different sites and vote. Note: Students can only vote once. 
 
 ## Administration
 
@@ -47,7 +44,7 @@ myusername,mypassword,myrole
 myusername2,mypassword2,myrole2 
 etc.
 ```
-Note: The logins csv must have the first row as described.
+Note: The logins CSV must have the first row as described.
 
 
 The sites zip upload is expecting a zip file in the following format:
@@ -62,7 +59,7 @@ sites.zip
 |  etc.
 ```
 
-Note: Any instructor account can add new logins to the database. The preexisting admin account is there to get you up and running as the site administrator.
+Note: Any instructor account can add new logins to the database. The pre-existing admin account (given above) is to get the website going as the site administrator. 
 
 Once you have your accounts uploaded, you can use the site.
 
